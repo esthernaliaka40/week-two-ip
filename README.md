@@ -12,19 +12,34 @@ Esther Naliaka Siranjofu
 
 ## Setup instructions
 
--git clone https://github.com/esthernaliaka40/week_two_ip.git
--open code with vs code
--Go with Live link https://esthernaliaka40.github.io/week_two_ip.git
+- git clone https://github.com/esthernaliaka40/week_two_ip.git
+- open code with vs code
+- Go Live
+
+## Live Link
+
+https://esthernaliaka40.github.io/week_two_ip.git
 
 ## BDD.
 
+ To access this project one can do it by:-
+- Inputing your date of birth
+- Picking of your gender
+- Hit the 'get name' button
+- Get your Akan name
 
 ## Technologies used.
 
-js
-HTML
-Bootstrap
-css
+ - js
+ - HTML
+ - Bootstrap
+ - css
 
-Contact information.
+### Contact information.
+
+ - Phone number 254 7205438
+ - esthernaliaka40@gmail.com
+
 License and Copyright information.
+
+  Copyright (c) 2022 Esther Naliaka
