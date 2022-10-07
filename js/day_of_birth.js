@@ -1,4 +1,3 @@
-const CC, YY, MM, DD, d, dayValue;
 
 const dayWeekNames = ["Sunday","Monday","Tuesday","Wednesday", "Thursday", "Friday","Saturday" ];
 
