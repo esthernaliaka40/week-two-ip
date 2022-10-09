@@ -2,59 +2,163 @@
 
 <html lang="en">
 
-  <head>
+<head>
 
-    <meta charset="UTF-8" />
+  <meta charset="UTF-8" />
 
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link
+  <link rel="stylesheet" href="../bootstrap-5.2.2-dist/css/bootstrap.css" type="text/css" media="all" />
 
-      rel="stylesheet"
+  <link rel="stylesheet" href="../css/ip.css" />
 
-      href="../bootstrap-5.2.2-dist/css/bootstrap.css"
+  <link rel="icon" href="../images/ghanaflag.png" type="img/jpg">
 
-      type="text/css"
+  <title>Esther's Akan Name Project</title>
 
-      media="all"
+</head>
 
-    />
+<body>
 
-    <link rel="stylesheet" href="../css/ip.css" />
+  <div class="container">
 
-    <link rel="icon" href="../images/ghanaflag.png" type="img/jpg">
+    <div class="jumbotron">
 
-    <title>Esther's Akan Name Project</title>
+      <br />
 
-  </head>
+      <h1>Esther's Akan Name Project </h1>
 
-  <body>
+
+      <img src="Images/images.jpeg" alt="Visible">
+      <p>
+
+        In this website, we are going to take your birthday and calculate the
+
+        day of the week you were born and then depending on your gender, we
+
+        will output your Akan Name. Akan names are derived from Ghanian
+
+        culture. Frequently in Ghana, children are given their first name as a
+
+        'day name' which corresponds to the day in the week they were born.
+
+        Here are Ghanian day names.
+
+      </p>
+
+    </div>
+
+  </div>
+
+  <br>
+
+  <br>
+
+  <div class="container">
+
+    <p id="p2">Akan names come from a traditional naming system for people from countries such as Togo, Ivory Coast and
+      Ghana. A child's name is determined by factors surrounding his or her birth. For example, the day of their birth
+      or the manner in which they were born may determine which name they get irrespective of their gender.</p>
+
+
+
+    <br>
+
+    <br>
+
+    <p id="p2">To get your Akan name, kindly fill the form below and we will calculate it for you</p>
+
+  </div>
+
+  <br>
+
+  <div class="overlay">
 
     <div class="container">
 
-   <div class="jumbotron">
+      <h2>Enter Your Age and Gender in Form below!</h2>
 
-        <br />
+      <form name="myForm" class="form" onsubmit="validate();">
 
-        <h1>Esther's Akan Name Project </h1>
+        <div class="form-group">
 
-      
-<img src="Images/images.jpeg" alt="Visible">
-        <p>
+          <label for="number">Year of Birth:</label>
 
-            In this website, we are going to take your birthday and calculate the
+          <input type="number" class="form-control" id="year" placeholder="Year of Birth Eg: 2020 if born in 2022"
+            name="year">
 
-          day of the week you were born and then depending on your gender, we
+        </div>
 
-          will output your Akan Name. Akan names are derived from Ghanian
+        <div class="form-group">
 
-          culture. Frequently in Ghana, children are given their first name as a
+          <label for="month">Month of Birth:</label>
 
-          'day name' which corresponds to the day in the week they were born.
+          <input type="number" class="form-control" id="month" placeholder="Month of Birth eg 01 for Jan" name="month">
 
-          Here are Ghanian day names.
+        </div>
+
+        <div class="form-group">
+
+          <label for="date">Date of Birth:</label>
+
+          <input type="number" class="form-control" id="date" placeholder="Date of Birth eg 05 for day" name="date">
+
+        </div>
+
+        <div class="form-group">
+
+          <label for="month">Gender</label><br>
+
+          <div class="form-check-inline">
+
+            <label class="form-check-label">
+
+              <input type="radio" class="form-check-input" name="gender" id="male">&nbsp; Male
+
+            </label>
+
+          </div>
+
+          <div class="form-check-inline">
+
+            <label class="form-check-label">
+
+              <input type="radio" class="form-check-input" name="gender" id="female">&nbsp; Female
+
+            </label>
+
+          </div>
+
+        </div>
+
+        <button type="submit" class="btn btn-primary" onclick="findName();">Find Your Akan Name</button>
+
+        <br>
+
+      </form>
+
+      <p id="results"> </p>
+
+    </div>
+
+  </div>
+
+  <div class="card-deck">
+
+    <div class="card ">
+
+      <div class="card-body text-center">
+
+        <p class="card-text">Your Akan Names generated are based on gender and the date you were born. <br>
+
+          <span class="fa-stack fa-lg">
+
+            <i class="fa fa-globe fa-stack-1x" style="color:rgb(248, 249, 250)"></i>
+
+          </span><a href="https://en.wikipedia.org/wiki/Akan_names"> More information on Akan names, click on the
+            link.</a>
 
         </p>
 
@@ -62,136 +166,26 @@
 
     </div>
 
-    <br>
+  </div>
 
-    <br>
+  </div>
 
-    <div class="container">
+  </div>
 
-          <p id="p2">Akan names come from a traditional naming system for people from countries such as Togo, Ivory Coast and Ghana. A child's name is determined by factors surrounding his or her birth. For example, the day of their birth or the manner in which they were born may determine which name they get irrespective of their gender.</p>
-
-      
-
-            <br>
-
-            <br>
-
-            <p id="p2">To get your Akan name, kindly fill the form below and we will calculate it for you</p>        
-
-        </div>
-
-        <br>
-
-    <div class="overlay">
-
-        <div class="container">
-
-          <h2>Enter Your Age and Gender in Form below!</h2>
-
-          <form name="myForm" class="form" onsubmit="validate();">
-
-            <div class="form-group">
-
-              <label for="number">Year of Birth:</label>
-
-              <input type="number" class="form-control" id="year" placeholder="Year of Birth Eg: 2020 if born in 2022" name="year">
-
-            </div>
-
-            <div class="form-group">
-
-              <label for="month">Month of Birth:</label>
-
-              <input type="number" class="form-control" id="month" placeholder="Month of Birth eg 01 for Jan" name="month">
-
-            </div>
-
-            <div class="form-group">
-
-              <label for="date">Date of Birth:</label>
-
-              <input type="number" class="form-control" id="date" placeholder="Date of Birth eg 05 for day" name="date">
-
-            </div>
-
-            <div class="form-group">
-
-              <label for="month">Gender</label><br>
-
-              <div class="form-check-inline">
-
-                <label class="form-check-label">
-
-                  <input type="radio" class="form-check-input" name="gender" id="male">&nbsp; Male
-
-                </label>
-
-              </div>
-
-              <div class="form-check-inline">
-
-                <label class="form-check-label">
-
-                  <input type="radio" class="form-check-input" name="gender" id="female">&nbsp; Female
-
-                </label>
-
-              </div>
-
-            </div>
-
-            <button type="submit" class="btn btn-primary" onclick="findName();">Find Your Akan Name</button>
-
-            <br>
-
-          </form>
-
-          <p id="results"> </p>
-
-        </div>
-
-    </div>
-
-    <div class="card-deck">
-
-        <div class="card ">
-
-          <div class="card-body text-center">
-
-            <p class="card-text">Your Akan Names generated are based on gender and the date you were born. <br>
-
-              <span class="fa-stack fa-lg">
-
-                  <i class="fa fa-globe fa-stack-1x" style="color:rgb(248, 249, 250)"></i>
-
-                </span><a href="https://en.wikipedia.org/wiki/Akan_names"> More information on Akan names, click on the link.</a>
-
-            </p>
-
-          </div>
-
-        </div>    
-
-        </div>
-
-    </div>
-
-</div>
-
-    <footer class="page-footer" style="color:rgb(252, 252, 252); font-size: large; font-style: italic; fon;
+  <footer class="page-footer" style="color:rgb(252, 252, 252); font-size: large; font-style: italic; fon;
     
     >
 
-      <div class="footer-copyright text-center py-3>Copyright © Oct 2022:
+      <div class=" footer-copyright text-center py-3>Copyright © Oct 2022:
 
-        <a href="https://github.com/esthernaliaka40/week_two_ip.git"> Esther Naliaka</a>
+    <a href="https://github.com/esthernaliaka40/week_two_ip.git"> Esther Naliaka</a>
 
-      </div>
+    </div>
 
-    </footer>
+  </footer>
 
-    <script src="./js/ip.js"></script>
+  <script src="./js/ip.js"></script>
 
-  </body>
+</body>
 
 </html>
