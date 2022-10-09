@@ -1,4 +1,4 @@
-  const dayWeekNames = [
+var daysOfTheWeek = [
   "Sunday",
   "Monday",
   "Tuesday",
@@ -6,233 +6,53 @@
   "Thursday",
   "Friday",
   "Saturday",
-];
+]; // shows days of the week
+var femaleNames = ["Akosua", "Adwoa", "Abenaa", "Akua", "Yaa", "Afua", "Ama"];
+var maleNames = ["Kwasi", "Kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi", "Kwame"];
 
-const maleAkanNames = [
-  "Kwasi",
-  "Kwadwo",
-  "Kwabena",
-  "Kwaku",
-  "Yaw",
-  "Kofi",
-  "Kwame",
-];
+var dateInput = prompt("Enter date of birth: YY-MM-DD:"); // requests user to put date of birth in indicated format.
 
-const femaleAkanNames = [
-  "Akosua",
-  "Adwoa",
-  "Abenaa",
-  "Akua",
-  " Yaa",
-  "Afua",
-  "Ama",
-];
+var birthDate = new Date(dateInput); // fetches date from the user input
 
-function validate() {
-  var genders = document.getElementsByName("gender");
+var dateBorn = birthDate.getDay(); // displays date of birth as  a number
+var birthMonth = birthDate.getMonth();
+var birthYear = birthDate.getFullYear();
 
+var femaleGender = femaleNames[dateBorn]; //converts number into name of day
+var maleGender = maleNames[dateBorn]; // converts number into name of day born
+
+var genderInput = prompt("Enter your gender: Male or Female").toUpperCase; // returns input in capital letters.
+
+if (genderInput === "Male") {
+  alert("Your Akan name is" + maleGender);
+} else {
+  alert("Your Akan name is" + femaleGender);
+}
+
+if ( genderInput ==="MALE" || genderInput==="FEMALE" || genderInput==="M" || genderInput==="F") {
+    alert("continue with in put");
+}
+else {
+    alert("invalid");
+}
+
+if (
+  dateBorn >= 0 &&
+  dateBorn <= 6 &&
+  birthMonth >= 0 &&
+  birthMonth <= 11 &&
+  birthYear >= 1000
+) {
   if (
-    document.myForm.year.value == "" ||
-    document.myForm.year.value.length != 4 ||
-    document.myForm.year.value > 2100 ||
-    document.myForm.year.value <= 1900
+    genderInput === "MALE" ||
+    genderInput === "FEMALE" ||
+    genderInput === "M" ||
+    genderInput === "F"
   ) {
-    alert("Please provide a valid year of birth! eg 2019");
-
-    document.myForm.year.focus();
-
-    return false;
-  } else if (
-    document.myForm.month.value == "" ||
-    isNaN(document.myForm.month.value) ||
-    document.myForm.month.value.length != 2 ||
-    document.myForm.month.value > 12 ||
-    document.myForm.month.value <= 0
-  ) {
-    alert("Please provide your month of birth! between 1 and 12");
-
-    document.myForm.month.focus();
-
-    return false;
-  } else if (
-    document.myForm.date.value == "" ||
-    isNaN(document.myForm.month.value) ||
-    document.myForm.month.value.length != 2 ||
-    document.myForm.date.value > 31 ||
-    document.myForm.date.value <= 0
-  ) {
-    alert("Please provide a valid date that you were born in!");
-
-    document.myForm.day.focus();
-
-    return false;
-  } else if (genders[0].checked == false && genders[1].checked == false) {
-    alert("You must select male or female");
-
-    return false;
+    alert("continue with in put");
   } else {
-    return true;
+    alert("invalid");
   }
-}
-
-function calculateDayValue() {
-  year = document.getElementById("year").value;
-
-  CC = parseInt(year.substring(0, 2));
-
-  YY = parseInt(year.substring(2, 4));
-
-  MM = parseInt(document.getElementById("month").value);
-
-  DD = parseInt(document.getElementById("date").value);
-
-  d = (CC / 4 - 2 * CC - 1 + (5 * YY) / 4 + (26 * (MM + 1)) / 10 + DD) % 7;
-
-  console.log(d);
-
-  return Math.floor(d);
-}
-
-function getGender() {
-  var genders = document.getElementsByName("gender");
-
-  if (genders[0].checked == true) {
-    var gender = "male";
-  } else if (genders[1].checked == true) {
-    var gender = "female";
-  } else {
-    return false;
-  }
-
-   switch (gender) {
-    case "male":
-      if (dayValue == 1) {
-        alert(
-          "You were born on " +
-            dayWeekNames[0] +
-            " and Your akan name is " +
-            maleAkanNames[0] +
-            "!"
-        );
-      } else if (dayValue == 2) {
-        alert(
-          "You were born on " +
-            dayWeekNames[1] +
-            " and Your akan name is " +
-            maleAkanNames[1] +
-            "!"
-        );
-      } else if (dayValue == 3) {
-        alert(
-          "You were born on " +
-            dayWeekNames[2] +
-            " and Your akan name is " +
-            maleAkanNames[2] +
-            "!"
-        );
-      } else if (dayValue == 4) {
-        alert(
-          "You were born on " +
-            dayWeekNames[3] +
-            " and Your akan name is " +
-            maleAkanNames[3] +
-            "!"
-        );
-      } else if (dayValue == 5) {
-        alert(
-          "You were born on " +
-            dayWeekNames[4] +
-            " and Your akan name is " +
-            maleAkanNames[4] +
-            "!"
-        );
-      } else if (dayValue == 6) {
-        alert(
-          "You were born on " +
-            dayWeekNames[5] +
-            " and Your akan name is " +
-            maleAkanNames[5] +
-            "!"
-        );
-      } else if (dayValue == -0) {
-        alert(
-          "You were born on " +
-            dayWeekNames[6] +
-            " and Your akan name is " +
-            maleAkanNames[6] +
-            "!"
-        );
-      }
-
-      break;
-
-    case "female":
-      if (dayValue == 1) {
-        alert(
-          "You were born on " +
-            dayWeekNames[0] +
-            " and Your akan name is  " +
-            femaleAkanNames[0] +
-            "!"
-        );
-      } else if (dayValue == 2) {
-        alert(
-          "You were born on " +
-            dayWeekNames[1] +
-            " and Your akan name is " +
-            femaleAkanNames[1] +
-            "!"
-        );
-      } else if (dayValue == 3) {
-        alert(
-          "You were born on " +
-            dayWeekNames[2] +
-            " and Your akan name is " +
-            femaleAkanNames[2] +
-            "!"
-        );
-      } else if (dayValue == 4) {
-        alert(
-          "You were born on " +
-            dayWeekNames[3] +
-            " and Your akan name is " +
-            femaleAkanNames[3] +
-            "!"
-        );
-      } else if (dayValue == 5) {
-        alert(
-          "You were born on " +
-            dayWeekNames[4] +
-            " and Your akan name is " +
-            femaleAkanNames[4] +
-            "!"
-        );
-      } else if (dayValue == 6) {
-        alert(
-          "You were born on " +
-            dayWeekNames[5] +
-            " and Your akan name is " +
-            femaleAkanNames[5] +
-            "!"
-        );
-      } else if (dayValue == -0) {
-        alert(
-          "You were born on " +
-            dayWeekNames[6] +
-            " and Your akan name is " +
-            femaleAkanNames[6] +
-            "!"
-        );
-      }
-
-      break;
-
-    default:
-  }
-}
-
-function findName() {
-  dayValue = calculateDayValue();
-
-  getGender();
+} else {
+  alert("wrong date");
 }
