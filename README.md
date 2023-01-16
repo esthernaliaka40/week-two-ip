@@ -18,7 +18,7 @@ Esther Naliaka Siranjofu
 
 ## Live Link
 
-https://esthernaliaka40.github.io/week_two_ip.git
+https://esthernaliaka40.github.io/week_two_ip
 
 ## BDD.
 
