@@ -1,141 +1,83 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
-
   <meta charset="UTF-8" />
-
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <link rel="stylesheet" href="../bootstrap-5.2.2-dist/css/bootstrap.css" type="text/css" media="all" />
-
-  <link rel="stylesheet" href="akan.css" />
-
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <link rel="stylesheet" href="/css/akan.css">
   <link rel="icon" href="Images/images.jpeg" type="img/jpg">
-
-  <link rel="stylesheet" href="day_of_birth.js">
-
-  title>Esther's Akan Name Project</title>
-
+  <link rel="stylesheet" href="/js/day_of_birth.js">
+  <title>Esther's Akan Name Project</title>
 </head>
-
-<body > 
-  
-</body>
-
-  </body>
-
+<body>
   <div class="container">
-
     <div class="jumbotron">
-
       <br />
-
       <h1>Esther's Akan Name Project </h1>
-
       <img src="Images/images.jpeg" alt="Visible">
       <p>
-
         In this website, we are going to take your birthday and calculate the
-
         day of the week you were born and then depending on your gender, we
-
         will output your Akan Name. Akan names are derived from Ghanian
         culture. In this case i took into consideration the Ghanian cultural way of naming their children in which they
         used the day a child was born as their first name, which corresponded to the day in the week when they were
         born.For instance, a Ghanian girl born on Sunday was named Akosua and a boy born on the same day was given the
         name Kwasi.
-
+       </p> 
         <p id="p2">To get your Akan name, kindly fill the form below and we will calculate it for you</p>        
-
         </div>
-
+  </div>
         <br>
-
     <div class="overlay">
-
         <div class="container">
-
           <h2>Enter Your Age and Gender in Form below!</h2>
-
           <form name="myForm" class="form" onsubmit="validate();">
-
             <div class="form-group">
-
               <label for="number">Year of Birth:</label>
-
               <input type="number" class="form-control" id="year" placeholder="Year of Birth Eg: 2020 if born in 2022" name="year">
-
             </div>
 
             <div class="form-group">
-
               <label for="month">Month of Birth:</label>
-
               <input type="number" class="form-control" id="month" placeholder="Month of Birth eg 01 for Jan" name="month">
-
             </div>
 
             <div class="form-group">
-
               <label for="date">Date of Birth:</label>
-
               <input type="number" class="form-control" id="date" placeholder="Date of Birth eg 05 for day" name="date">
-
             </div>
 
             <div class="form-group">
-
               <label for="month">Gender</label><br>
-
               <div class="form-check-inline">
-
                 <label class="form-check-label">
-
                   <input type="radio" class="form-check-input" name="gender" id="male">&nbsp; Male
-
                 </label>
-
               </div>
-
               <div class="form-check-inline">
-
                 <label class="form-check-label">
-
                   <input type="radio" class="form-check-input" name="gender" id="female">&nbsp; Female
-
                 </label>
-
               </div>
-
             </div>
 
             <button type="submit" class="btn btn-primary" onclick="findName();">Find Your Akan Name</button>
-
             <br>
-
           </form>
-
           <p id="results"> </p>
-
         </div>
-
     </div>
 
     <div class="card-deck">
-
         <div class="card ">
-
           <div class="card-body text-center">
-
             <p class="card-text">Your Akan Names generated are based on gender and the date you were born. <br>
-
               <span class="fa-stack fa-lg">
-
                   <i class="fa fa-globe fa-stack-1x" style="color:rgb(248, 249, 250)"></i>
+                </div>
+              </div>
+            </div>
 <h2>Male names</h2>
 <p> 
   <ul>
@@ -175,13 +117,9 @@
   </div>
 
       
-      >
-
-        <div class=" footer-copyright text-center py-3>Copyright © Oct 2022:
-
-    a href="https://github.com/esthernaliaka40/week_two_ip.git"> Esther Naliaka</a>
-
-    </div>
+  <div class= footer-copyright text-center py-3>Copyright © Oct 2022:
+    <a href="https://github.com/esthernaliaka40/week_two_ip.git">Esther Naliaka</a>
+</div>
 
   </footer>
 

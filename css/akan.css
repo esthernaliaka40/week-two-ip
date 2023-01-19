@@ -1,42 +1,75 @@
-jumbotron {
+    body {
 
-    padding-top: 30px;
+      color: pink;
 
-    padding-bottom: 15px;
+}
+.jumbotron {
 
-    margin-bottom: 15px;
+  padding-top: 30px;
 
-    color: inherit;
+  padding-bottom: 15px;
 
-    background-color: rgb(102, 99, 99);
+  margin-bottom: 15px;
 
-  }
+  color: inherit;
 
-  .jumbotron h1,
+  background-color: rgb(102, 99, 99);
 
-  .jumbotron .h1 {
+}
 
-    color: inherit;
+.jumbotron h1,
 
-  }
+.jumbotron .h1 {
 
-  .jumbotron p {
+  color: inherit;
 
-    margin-bottom: 15px;
+}
 
-    font-size: 21px;
+.jumbotron p {
 
-    font-weight: 200;
+  margin-bottom: 15px;
 
-    color: black;
+  font-size: 21px;
 
-    margin-left: 15px;
+  font-weight: 200;
 
-  }
+  color: black;
 
-  .jumbotron > hr {
+  margin-left: 15px;
 
-    border-top-color: #d5d5d5;
+}
+
+.jumbotron > hr {
+
+  border-top-color: #d5d5d5;
+
+}
+
+.container .jumbotron,
+
+.container-fluid .jumbotron {
+
+  padding-right: 15px;
+
+  padding-left: 15px;
+
+  border-radius: 6px;
+
+}
+
+.jumbotron .container {
+
+  max-width: 100%;
+
+}
+
+@media screen and (min-width: 768px) {
+
+  .jumbotron {
+
+    padding-top: 48px;
+
+    padding-bottom: 48px;
 
   }
 
@@ -44,268 +77,49 @@ jumbotron {
 
   .container-fluid .jumbotron {
 
-    padding-right: 15px;
+    padding-right: 60px;
 
-    padding-left: 15px;
-
-    border-radius: 6px;
+    padding-left: 60px;
 
   }
 
-  .jumbotron .container {
+  .jumbotron h1,
 
-    max-width: 100%;
+  .jumbotron .h1 {
 
-  }
-
-  @media screen and (min-width: 768px) {
-
-    .jumbotron {
-
-      padding-top: 48px;
-
-      padding-bottom: 48px;
-
-    }
-
-    .container .jumbotron,
-
-    .container-fluid .jumbotron {
-
-      padding-right: 60px;
-
-      padding-left: 60px;
-
-    }
-
-    .jumbotron h1,
-
-    .jumbotron .h1 {
-
-      font-size: 63px;
-
-    }
-
-  }
-
-  #image {
-
-    width: 500px;
-
-    height:500px;
-
-    margin-left: 25%;
-
-  }
-
-  #jumboimage {
-
-    float: left;
-
-    margin: 12px;
-
-    width: 150px;
-
-    height: 180px;
-
-  }
-
-  .field
-
-  {
-
-    width: 100%;
-
-  }
-
- 
-
-  body {
-
-    background-image: url("/images/background.jpg");
-
-    background-image: no-repeat;
-
-    width: 100%;
-
-    height: 100%;
-
-  }
-
-  h2 {
-
-    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-
-    color: rgb(235, 244, 244);
-
-    text-decoration: underline;
-
-    text-align: center;
-
-  }
-
-  #p1 {
-
-    font-family: Verdana, Geneva, Tahoma, sans-serif;color: rgb(16, 17, 18);
-
-  }
-
-  #p2 {
-
-    font-family: Verdana, Geneva, Tahoma, sans-serif;color: rgb(250, 251, 253);text-align: center;
-
-  }
-
-.card{
-
-  background: rgb(246, 247, 249);
-
-}
-
-.card-body{
-
-  color: rgb(0, 0, 0);
-
-}
-
-.card-deck{
-
-  padding-bottom: 20px;
-
-  font-weight: 600;
-
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-
-  font-size: 18px;
-
-}
-
-.footer-copyright{
-
-  color: rgb(255, 255, 255);
-
-  font-weight: 600;
-
-  font-size: 18px;
-
-}
-
-.footer-copyright a{
-
-color: rgb(255, 255, 255);;
-
-font-weight: 600;
-
-}
-
-.footer-copyright a:hover{
-
-  color: rgb(254, 254, 254);
-
-  font-weight: 700;
-
-  text-decoration: none;
-
-}
-
-.card-text a:hover{
-
-  color: rgb(0, 0, 0);
-
-  text-decoration: none;
-
-}
-
-.form-group{
-
-  color: rgb(255, 255, 255);
-
-  font-weight: 600;
-
-  font-size: 18px;
-
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-
-}
-
-.form-check-label{
-
-  color: rgb(255, 255, 255);
-
-}
-
-input[type="radio"] {
-
-  -webkit-transform: scale(1.5);
-
-  transform: scale(1.5);
-
-}
-
-@media only screen and (max-width: 600px){
-
-  .overlay{
-
-    margin-left: 1%;
-
-    margin-right: 2%;
+    font-size: 63px;
 
   }
 
 }
 
-@media only screen and (max-width: 800px){
+#image {
 
-  .overlay{
+  width: 500px;
 
-    margin-left: 1%;
+  height:500px;
 
-    margin-right: 1%;
-
-  }
+  margin-left: 25%;
 
 }
 
-.page-footer{
+#jumboimage {
 
-  background-color: rgb(0,0,0,0.8);
+  float: left;
+
+  margin: 12px;
+
+  width: 150px;
+
+  height: 180px;
+
+}
+
+.field
+
+{
 
   width: 100%;
 
 }
 
-.overlay{
-
-  background-color: rgb(0,0,0,0.4);
-
-  background-color: rgb(0,0,0,0.5);
-
-  margin-left: 25%;
-
-  margin-right: 16%;
-
-  opacity: 0.9;
-
-  border-radius: 10px;
-
-}
-
-.button {
-
-    background-color: #0c0d0c; /* Green */
-
-    border: none;
-
-    color: white;
-
-    padding: 15px 32px;
-
-    text-align: center;
-
-    text-decoration: none;
-
-    display: inline-block;
-
-    font-size: 16px;
-
-  }
