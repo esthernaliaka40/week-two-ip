@@ -12,13 +12,13 @@ Esther Naliaka Siranjofu
 
 ## Setup instructions
 
-- git clone https://github.com/esthernaliaka40/week_two_ip.git
+- git clone https://github.com/esthernaliaka40/week-two-ip.git
 - open code with vs code
 - Go Live
 
 ## Live Link
 
-https://esthernaliaka40.github.io/week_two_ip
+https://esthernaliaka40.github.io/week-two-ip
 
 ## BDD.
 
